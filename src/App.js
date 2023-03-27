@@ -4,7 +4,9 @@ import webSocket from "socket.io-client";
 import Home from "./pages/home";
 import Chat from "./pages/chat";
 
-const ws = webSocket("http://localhost:3000", { transports: ["websocket"] });
+const ws = webSocket("https://chat-room-server.onrender.com", {
+  transports: ["websocket"],
+});
 
 function App() {
   const [username, setUsername] = useState("");
